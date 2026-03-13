@@ -53,7 +53,6 @@ std::vector<int> seconds(const std::vector<std::pair<int,int>>& v) {
     std::vector<int> result;
     for (const auto& [first,second]:v) {
         result.push_back(second);
-        result.push_back(second);
     }
     return result;
 }

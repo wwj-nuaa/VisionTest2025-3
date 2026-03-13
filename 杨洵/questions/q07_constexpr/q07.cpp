@@ -17,7 +17,7 @@ constexpr int factorial(int n){
 // ===== 填空 2 =====
 // 知识点：constexpr 变量（C++11）
 // 请用 constexpr 声明编译期常量
-constexpr int MAX_SIZE=100;
+constexpr int MAX_SIZE=256;
 // ===== 填空 2 结束 =====
 
 // ===== 填空 3 =====
@@ -26,9 +26,9 @@ constexpr int MAX_SIZE=100;
 template <typename T>
 std::string type_category() {
     if constexpr (std::is_integral_v<T>){
-        return "other";
-    } else {
         return "integral";
+    } else {
+        return "other";
     }
 }
 // ===== 填空 3 结束 =====
@@ -57,7 +57,7 @@ int main() {
     CHECK_EQ(MAX_SIZE, 256);
 
     CHECK_EQ(type_category<int>(), std::string("integral"));
-    CHECK_EQ(type_category<char>(), std::string("other"));
+    CHECK_EQ(type_category<char>(), std::string("integral"));
     CHECK_EQ(type_category<double>(), std::string("other"));
 
     constexpr int s = square(7);

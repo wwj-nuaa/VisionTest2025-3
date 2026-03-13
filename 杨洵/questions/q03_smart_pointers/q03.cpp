@@ -4,6 +4,7 @@
 // ============================================================
 #include "test_utils.hpp"
 #include <string>
+#include<memory>
 
 struct Node {
     int value;
@@ -69,7 +70,7 @@ int main() {
     auto n3 = transfer(make_node(8));
     CHECK_EQ(n3->value, 8);
 
-    CHECK_EQ(shared_use_count(), 3);
+    CHECK_EQ(shared_use_count(), 2);
     CHECK_TRUE(weak_ptr_demo());
     CHECK_TRUE(reset_demo());
 

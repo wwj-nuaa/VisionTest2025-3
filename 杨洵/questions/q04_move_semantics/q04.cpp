@@ -4,6 +4,8 @@
 // ============================================================
 #include "test_utils.hpp"
 #include <utility>
+#include<string>
+#include<vector>
 
 // ===== 填空 1 =====
 // 知识点：std::move 将左值转为右值引用，触发移动构造
